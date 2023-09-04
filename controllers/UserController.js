@@ -32,7 +32,7 @@ const user=await User.create({email,password:hash}) //Creates a user with the pr
 const token=createToken(user._id)
 res.status(200).json({email,token})//This json executes if everything goes fine in this try block(sends back the entered email and the generated jwt token as response)
 } catch (error) {
-    res.status(400).json({error:error.message})
+res.status(400).json({error:error.message})
 }
 }
 //logging in users
