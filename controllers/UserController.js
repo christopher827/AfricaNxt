@@ -49,7 +49,7 @@ if (!email || !password) { //If a field or both is left empty, it'll return this
     }
     const user=await User.findOne({email}) //Checks if the email is in our database
 if (!user) {  //if the email is not, it returns this message
-    return res.status(400).json({error:"Email not recognised"})
+return res.status(400).json({error:"Email not recognised"})
 }
 //Compares the entered password with the password in the database
 const match=await bcrypt.compare(password,user.password)
