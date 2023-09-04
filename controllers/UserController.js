@@ -62,7 +62,7 @@ res.status(200).json({email,token}) //This json executes if everything goes fine
 
 const adminLogin=async(req,res)=>{
 const {email,password}=req.body //The values collected from the request body/frontend
-    if (!email || !password) { //If a field or both is left empty, it'll return this message and won't proceed to the next function
+if (!email || !password) { //If a field or both is left empty, it'll return this message and won't proceed to the next function
         return res.status(400).json({error:"All fields must be filled"})
     }
     if (!validator.isEmail(email)) {  //Checks if the email entered is valid or not
