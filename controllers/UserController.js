@@ -75,7 +75,7 @@ return res.status(400).json({error:"All fields must be filled"})
     if(!admin){
         return res.status(400).json("Email not recognised")
     }
-    const match=await bcrypt.compare(password,admin.password)
+const match=await bcrypt.compare(password,admin.password)
 if (!match) {
 return res.status(400).json({error:"Incorrect password"})
 }
