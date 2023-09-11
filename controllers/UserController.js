@@ -73,7 +73,7 @@ if (!validator.isStrongPassword(password)) { //Checks if the password entered is
     }
     const admin=await Admin.findOne({email})
     if(!admin){
-        return res.status(400).json("Email not recognised")
+    return res.status(400).json("Email not recognised")
     }
 const match=await bcrypt.compare(password,admin.password)
 if (!match) {
