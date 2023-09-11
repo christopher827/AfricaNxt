@@ -73,7 +73,7 @@ return res.status(400).json({error:"Password is not strong enough"})
     }
     const admin=await Admin.findOne({email})
     if(!admin){
-    return res.status(400).json("Email not recognised")
+return res.status(400).json("Email not recognised")
     }
 const match=await bcrypt.compare(password,admin.password)
 if (!match) {
