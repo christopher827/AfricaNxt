@@ -77,7 +77,7 @@ return res.status(400).json({error:"All fields must be filled"})
     }
     const match=await bcrypt.compare(password,admin.password)
 if (!match) {
-    return res.status(400).json({error:"Incorrect password"})
+return res.status(400).json({error:"Incorrect password"})
 }
 const token=createToken(admin._id)
 res.status(200).json({email,token}) //This json executes if everything goes fine in this try block(sends back the entered email and the generated jwt token as response)
