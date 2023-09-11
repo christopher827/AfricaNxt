@@ -70,7 +70,7 @@ return res.status(400).json({error:"Invalid email format"})
 }
 if (!validator.isStrongPassword(password)) { //Checks if the password entered is strong enough or not
 return res.status(400).json({error:"Password is not strong enough"})
-    }
+ }
     const admin=await Admin.findOne({email})
     if(!admin){
 return res.status(400).json("Email not recognised")
