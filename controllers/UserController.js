@@ -66,7 +66,7 @@ if (!email || !password) { //If a field or both is left empty, it'll return this
 return res.status(400).json({error:"All fields must be filled"})
 }
 if (!validator.isEmail(email)) {  //Checks if the email entered is valid or not
-    return res.status(400).json({error:"Invalid email format"})      
+return res.status(400).json({error:"Invalid email format"})      
     }
     if (!validator.isStrongPassword(password)) { //Checks if the password entered is strong enough or not
         return res.status(400).json({error:"Password is not strong enough"})
